@@ -7,7 +7,7 @@ name = "backtracking"
 version = "0.1.0"
 description = "Minimal numba-compatible proton backtracking with IGRF-14."
 requires-python = ">=3.10"
-dependencies = ["numpy","numba"]
+dependencies = ["numpy","numba","pandas","matplotlib"]
 
 [tool.setuptools]
 packages = ["backtracking"]
