@@ -1,0 +1,40 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Numba cache files
+*.nbi
+*.nbc
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Local generated files
+traj.csv
+*.root
+
+# Local compiled artifacts
+*.o
+*.mod
+*.so
+*.dylib
+
+# macOS/editor noise
+.DS_Store
+.vscode/

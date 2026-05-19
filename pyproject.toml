@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtracking"
+version = "0.1.0"
+description = "Minimal numba-compatible proton backtracking with IGRF-14."
+requires-python = ">=3.10"
+dependencies = ["numpy","numba"]
+
+[tool.setuptools]
+packages = ["backtracking"]
+
+[tool.setuptools.package-dir]
+backtracking = "."
+
+[tool.setuptools.package-data]
+backtracking = ["igrf14coeffs.txt"]

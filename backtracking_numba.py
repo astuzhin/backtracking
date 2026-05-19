@@ -4,7 +4,10 @@ import math
 
 import numpy as np
 
-from igrf14_numba import igrf14syn
+try:
+    from .igrf14_numba import igrf14syn
+except ImportError:
+    from igrf14_numba import igrf14syn
 
 try:
     from numba import njit
