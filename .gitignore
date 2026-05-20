@@ -25,9 +25,10 @@ dist/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+*.ipynb
 
 # Local generated files
-traj.csv
+*.csv
 *.root
 
 # Local compiled artifacts
