@@ -62,6 +62,36 @@ t_s, x_km, y_km, z_km, ux, uy, uz
 
 `ux, uy, uz` are unit direction components, not velocity components.
 
+## TS05 Field By Time
+
+TS05 parameter files are read from `backtracking/ts05`. The timestamp is used to
+select the nearest 5-minute record.
+
+TS05 uses the local Fortran source `ts05_fixed.f`. On first use, the package
+builds the shared library for the current platform:
+
+```text
+macOS: libts05.dylib
+Linux: libts05.so
+```
+
+This requires `gfortran` to be available.
+
+```python
+import pandas as pd
+import backtracking as bktg
+
+bx, by, bz = bktg.ts05_field_at_time(
+    pd.Timestamp("2023-01-03 01:15:00"),
+    x_gsm_re=5.0,
+    y_gsm_re=0.0,
+    z_gsm_re=0.0,
+)
+```
+
+The input position is in GSM coordinates, Earth radii `Re`. The returned field
+is the external TS05/T04_s field in GSM coordinates, nT.
+
 ## Notes
 
 - Coordinates are Earth-centered Cartesian coordinates in km.

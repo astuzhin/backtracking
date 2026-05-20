@@ -11,9 +11,15 @@ dependencies = ["numpy","numba","pandas","matplotlib"]
 
 [tool.setuptools]
 packages = ["backtracking"]
+include-package-data = true
 
 [tool.setuptools.package-dir]
 backtracking = "."
 
 [tool.setuptools.package-data]
-backtracking = ["igrf14coeffs.txt"]
+backtracking = [
+    "igrf14coeffs.txt",
+    "ts05_c_wrapper.f90",
+    "ts05_fixed.f",
+    "ts05/*.dat",
+]
